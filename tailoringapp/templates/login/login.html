@@ -1,0 +1,44 @@
+<html>
+	<head>
+
+		<link type="text/css" href="/static/files/loginstyle.css" rel="stylesheet" media="all">
+
+	</head>
+	
+	<body>
+  <div style="position: absolute;width: 98%;height: 50px;background-color: darkblue;top:0px;" class="topbar">
+
+  </div>
+
+	<div class="container" style="position: absolute;width: 800px;height: 400px;background-color: black;left: 8em;top:50px;">
+
+		<div class="inner" style="position: absolute;top: 0;width: 798px;height: 399px;background-color: white;left: 1px;">
+
+			<t style="position: absolute;text-align: center;left: 10em;font-family: Tahoma;font-size: 25px;">Management Unit Login Page</t>
+
+			{% if unauth %}
+
+				{% if bruteprotect %}
+
+					<t style="position: absolute;left: 20em;top: 80;font-family: tahoma;font-size: 14;color: red;">Too many attempts, try again in 5min.</t>
+
+				{% else %}
+
+					<t style="position: absolute;left: 21em;top: 80;font-family: tahoma;font-size: 14;color: red;">Incorrect Username or Password!</t>
+				{% endif %}
+			{% endif %}
+
+
+<form method="post" action="/login/" style="position: absolute;top: 100px;left: 15em;">
+
+        {% csrf_token %}
+
+	{{form}}
+  <input type="submit" value="LogIn" style="position: absolute;width: 200px;height: 40px;background-color: darkblue;border-radius: 10px;left: 65px;top: 150px;color: white;">
+</form>
+
+		</div>
+
+	</div>
+
+</body></html>

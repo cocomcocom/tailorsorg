@@ -1,0 +1,70 @@
+{% extends "main/home.html" %}
+
+{% block appbar %} {{block.super}} {% endblock %}
+
+{% block rest %}
+
+<div class="header"><t style="font-family: Tahoma;font-size: 40px;color:black;text-align: center;position: absolute;left: 10px;">Queue</t>
+
+<t style="font-family: Tahoma;font-size: 40px;color:black;position: absolute;left:10em;">Pending</t>
+
+<button onclick="addpending()" style="position: absolute;left: 41em;top:16px;color: black;width: 50px;">add</button>
+
+<t style="font-family: Tahoma;font-size: 40px;color: black;position: absolute;left: 20em;">Served</t>
+
+<button onclick="addserved()" style="position: absolute;left: 70em;top:6;color: black;width: 50px;">add</button>
+
+<button onclick="remove()" style="position: absolute;left: 69.6em;top:34px;color: black;width: 60px;background-color:red;border-radius: 10px;">remove</button>
+
+</div>
+
+<div class="queue">
+	
+	{% if queuedata %}
+
+	{% for value in queuedata %}
+
+  <div style="background-color: darkkhaki;"><t style="font-family: Tahoma;font-size: 20px;">{{value.Username}}({{value.id}})  :  Enqueued</t></div>
+
+	{% endfor %}
+
+	{% else %}
+		
+		<t style="position: absolute;color: red;font-size: 40px;left: 50px;top: 100px;">Nothing Yet</t>
+
+        {% endif %}
+</div>
+<div class="pending">
+
+	{% if pendingdata %}
+
+	{% for value in pendingdata %}
+
+  <div style="background-color: darkkhaki;"><t style="font-family: Tahoma;font-size: 20px;">{{value.Username}}  :  Pending</t></div>
+
+	{% endfor %}
+	
+	{% else %}
+		
+		<t style="position: absolute;color: red;font-size: 40px;left: 50px;top: 100px;">Nothing Yet</t>
+
+	{% endif %}
+
+</div></div>
+<div class="served">
+
+	{% if serveddata %}
+
+	{% for value in serveddata %}
+
+  <div style="background-color: darkkhaki;"><t style="font-family: Tahoma;font-size: 20px;">{{value.Username}}  :  Served</t></div>
+
+	{% endfor %}
+
+	{% else %}
+		
+		<t style="position: absolute;color: red;font-size: 40px;left: 50px;top: 100px;">Nothing Yet</t>
+
+	{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,137 @@
+body {
+    background-color:grey;
+}
+.app_bar {
+    width: 100%;
+    height: 60px;
+    background: #000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.b_home {
+    width: 100px;
+    height: 50px;
+    background: #ff0000;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border-radius: 50px;
+}
+
+.design {
+    width: 100px;
+    height: 50px;
+    background: #ff0000;
+    position: absolute;
+    left: 150px;
+    top: 5px;
+    border-radius: 50px;
+}
+
+.service {
+    width: 100px;
+    height: 50px;
+    background: #ff0000;
+    position: absolute;
+    left: 300px;
+    top: 5px;
+    border-radius: 50px;
+}
+.align {
+
+	position: absolute;
+
+	left: 300px;
+
+}
+
+.content {
+    position: absolute;
+    border-radius: 40px;
+    background-color: #000000;
+    width: 95px;
+    height: 45px;
+    top: 2.5px;
+    left: 20px;
+    margin: auto;
+}
+
+.text {
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.intro {
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    background-color: black;
+    border-radius: 40px;
+    width: 500px;
+    height: 60px;
+}
+
+.intro1 {
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 265px;
+    background-color: black;
+    border-radius: 40px;
+    width: 500px;
+    height: 60px;
+}
+.fb {
+    font-family: Tahoma;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    left: 5px;
+    top: 85%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+.gmail {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 85%;
+    left: 4em;
+    border-radius: 30px;
+}
+.address {
+    position: absolute;
+    background-image: url("./loc.png");
+    width: 50px;
+    height: 50px;
+    top: 85%;
+    left: 75%;
+}
+.loc {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 85%;
+    left: 78%;
+}

@@ -1,0 +1,78 @@
+<html><head>
+	<link type="text/css" href="{{stylesheet}}" rel="stylesheet" media="all">
+<script>
+
+function msg() {alert("Your Queue ID is : {{ID.Username}}{{ID.id}}, {{msg}}");};
+
+function noqueued() {alert("No Queued customer");};
+
+function nopending() {alert("No Pending customer");};
+
+function noserved() {alert("No Served customer");};
+
+function dequeueinfo() {alert("All non-responded customers have been dequeued!");};
+
+function nodequeued() {alert("No Non-responded customers");};
+
+function logout() { document.location = "/logout"; };
+
+function autodequeue() { document.location = "/dequeue"; };
+
+function addpending() { document.location = "/addpending"; };
+
+function addserved() { document.location = "/addserved"; };
+
+
+function remove() { document.location = "/removeserved"; };
+</script>
+</head>
+
+<body onload="{{alert}}">
+
+{% block appbar %}
+<div id="appbar" class="app_bar">
+
+<div id="align" class="align" style="position: absolute;left: 13em;">
+
+		<div id="bhome" class="b_home">
+			<div id="content" class="content">
+			<span class="text"><a href="/home" style="color:#ffff;">Home</a></span>
+			</div>
+		</div>
+
+		<div id="design" class="design">
+			<div id="content" class="content">
+			<span class="text"><a href="/design" style="color:#ffff;">Designs</a></span>
+			</div>
+		</div>
+
+		<div id="service" class="service">
+			<div id="content" class="content">
+			<span class="text"><a href="/service" style="color:#ffff;">Service</a></span>
+			</div>
+		</div>
+
+<div id="service" class="service" style="position: absolute;left: 28em;">
+			<div id="content" class="content">
+			<span class="text"><a href="/manage" style="color:#ffff;">Manager</a></span>
+			</div>
+		</div>
+	</div>
+
+	{{mContent | safe}}
+	</div>
+{% endblock %}
+{% block rest %}
+<div class="logo" style="position:absolute; left:260px; top:100px;" ><img style="left:0; top:50px;position: absolute;width: 500px;height: 250px;" src="{{logomage}}" width="250" height="250">
+<div class="intro">Asad Tailoring Service</div><div class="intro1">Specialized in Tailoring!</div>
+</div>
+
+<div class="fb"><a href="m.facebook.com" style="color:blue">f</a></div>
+<div class="gmail"><t style="text-align: center;color: white;position: absolute;left: 2px;top: 13px;font-family: Tahoma;font-size: 18px;">Gmail</t></div>
+<t style="text-align: center;color: white;position: absolute;left: 78%;top: 78%;font-family: Tahoma;font-size: 20px;">Address</t><div class="address" ></div>
+
+<div class="loc"><t style="color: white;font-family: Tahoma;">{{address}}</t></div>
+
+<div style="position: absolute;top: 88%;left: 12%;"><t style="color: white;">{{mailinfo}}</t></div>
+{% endblock %}
+</body></html>

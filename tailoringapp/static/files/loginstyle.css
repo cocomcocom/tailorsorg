@@ -1,0 +1,46 @@
+.topbar {
+    position: absolute;
+    width: 98%;
+    height: 50px;
+    background-color: darkblue;
+    top: 0px;
+}
+
+.container {
+    position: absolute;
+    width: 800px;
+    height: 400px;
+    background-color: black;
+    left: 8em;
+    top: 50px;
+}
+
+.inner {
+    position: absolute;
+    top: 0;
+    width: 798px;
+    height: 399px;
+    background-color: white;
+    left: 1px;
+}
+
+.username {
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    left: 40px;
+    box-sizing: border-box;
+    top: 20px;
+}
+
+element {
+}
+.password {
+    position: absolute;
+    width: 250px;
+    height: 40px;
+    left: 40px;
+    top: 80px;
+    box-sizing: border-box;
+}
+
